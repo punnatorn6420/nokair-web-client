@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MOCK_SESSION_COOKIE } from "@/lib/security/auth";
+import { SpamSimulationPanel } from "./spam-simulation-panel";
 
 export const dynamic = "force-dynamic";
 
@@ -116,6 +117,8 @@ export default async function SSRCheckPage() {
           </p>
         </CardContent>
       </Card>
+
+      <SpamSimulationPanel />
     </main>
   );
 }

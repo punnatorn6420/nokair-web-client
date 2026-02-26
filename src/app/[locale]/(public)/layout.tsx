@@ -1,15 +1,16 @@
 import SiteFooter from "@/components/common/site-footer";
 import SiteHeader from "@/components/common/site-header";
-import type { Locale } from "@/lib/i18n/server";
+import { assertLocale } from "@/lib/i18n/server";
 
 export default async function PublicLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: localeParam } = await params;
+  const locale = assertLocale(localeParam);
 
   return (
     <div className="flex min-h-screen flex-col bg-white">

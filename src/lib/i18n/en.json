@@ -1,1 +1,7 @@
-{}
+{
+  "home": {
+    "title": "Welcome to Nok Air",
+    "description": "Book flights faster with a lightweight, localized web experience.",
+    "cta": "Start booking"
+  }
+}

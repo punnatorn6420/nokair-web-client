@@ -13,7 +13,9 @@ export default function HomeContent() {
         Locale: {locale}
       </p>
       <h1 className="text-4xl font-bold md:text-5xl">{t("title")}</h1>
-      <p className="max-w-2xl text-lg text-muted-foreground">{t("description")}</p>
+      <p className="max-w-2xl text-lg text-muted-foreground">
+        {t("description")}
+      </p>
       <Button size="lg">{t("cta")}</Button>
     </main>
   );

@@ -1,52 +1,17 @@
-import localFont from "next/font/local";
 import "@/app/globals.css";
-import { I18nProvider } from "@/lib/i18n";
-import { getRequestLocale } from "@/lib/locales";
-
-async function loadMessages(locale: "th" | "en") {
-  if (locale === "en") {
-    return (await import("../lib/i18n/en.json")).default;
-  }
-  return (await import("../lib/i18n/th.json")).default;
-}
-
-const dbOzoneX = localFont({
-  src: [
-    {
-      path: "../../public/fonts/DB Ozone X.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/DB Ozone X Med.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/DB Ozone X Bd.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-  variable: "--font-db-ozone-x",
-});
+import { headers } from "next/headers";
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getRequestLocale();
-  const messages = await loadMessages(locale);
+  const requestHeaders = await headers();
+  const locale = requestHeaders.get("x-locale") === "en" ? "en" : "th";
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${dbOzoneX.variable} antialiased`}>
-        <I18nProvider locale={locale} messages={messages}>
-          {children}
-        </I18nProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

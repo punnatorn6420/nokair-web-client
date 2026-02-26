@@ -1,12 +1,12 @@
 import { getT, type Locale } from "@/lib/i18n/server";
 
-export default async function BookingPage({
+export default async function FlightStatusPage({
   params,
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const t = await getT(locale, "booking");
+  const t = await getT(locale, "flightStatus");
 
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">

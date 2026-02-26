@@ -1,7 +1,43 @@
 {
-  "home": {
-    "title": "ยินดีต้อนรับสู่ นกแอร์",
-    "description": "จองเที่ยวบินได้ไวขึ้นด้วยเว็บที่เบาและรองรับหลายภาษา",
-    "cta": "เริ่มจองเที่ยวบิน"
+  "header": {
+    "brand": "Nok Air",
+    "nav": {
+      "home": "หน้าแรก",
+      "booking": "จองเที่ยวบิน",
+      "promotions": "โปรโมชัน",
+      "flightStatus": "สถานะเที่ยวบิน",
+      "contact": "ติดต่อเรา"
+    }
+  },
+  "footer": {
+    "title": "นกแอร์",
+    "description": "สายการบินราคาประหยัดของคนไทย บินสะดวก เช็กอินง่าย และบริการเป็นกันเอง",
+    "linksTitle": "เมนูลัด",
+    "links": ["จองเที่ยวบิน", "เช็กอินออนไลน์", "สถานะเที่ยวบิน", "โปรโมชันล่าสุด"],
+    "copyright": "© 2026 Nok Air Demo. สงวนลิขสิทธิ์"
+  },
+  "publicHome": {
+    "title": "บินคุ้ม สนุกทุกเส้นทาง",
+    "subtitle": "ยินดีต้อนรับสู่หน้าแรกของ Nok Air Web",
+    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, nibh at malesuada volutpat, massa nisl bibendum augue, in malesuada nulla lectus sed urna. Cras convallis mauris non orci gravida, vitae accumsan nunc faucibus.",
+    "cta": "ไปหน้าจองเที่ยวบิน"
+  },
+  "booking": {
+    "title": "จองเที่ยวบิน",
+    "description": "ค้นหาเที่ยวบินราคาดี เลือกเส้นทางยอดนิยม เช่น เชียงใหม่ ภูเก็ต หาดใหญ่ และอุบลราชธานี ได้ในไม่กี่คลิก"
+  },
+  "promotions": {
+    "title": "โปรโมชัน",
+    "items": ["โปรตั๋วเริ่มต้น 699 บาท", "ส่วนลดสัมภาระ 20%", "สมาชิก Nok Fan Club รับแต้มเพิ่ม"]
+  },
+  "flightStatus": {
+    "title": "สถานะเที่ยวบิน",
+    "description": "ตรวจสอบเวลาออกเดินทาง เวลาโดยประมาณ และประตูขึ้นเครื่องล่าสุดของเที่ยวบินนกแอร์"
+  },
+  "contact": {
+    "title": "ติดต่อเรา",
+    "description": "สอบถามข้อมูลเที่ยวบิน บริการเสริม หรือความช่วยเหลือด้านการเดินทางได้ทุกวัน",
+    "phone": "Call Center: 1318",
+    "email": "อีเมล: contact@nokair.com"
   }
 }

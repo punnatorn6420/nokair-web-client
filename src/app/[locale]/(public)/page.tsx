@@ -1,5 +1,4 @@
 import Link from "next/link";
-import LanguageSwitcher from "@/components/common/language-switcher";
 import { Button } from "@/components/ui/button";
 import { getT, type Locale } from "@/lib/i18n/server";
 
@@ -9,21 +8,18 @@ export default async function HomePage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const t = await getT(locale, "home");
+  const t = await getT(locale, "publicHome");
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-4xl flex-col items-center justify-center gap-6 px-6 text-center">
-      <div className="w-full flex justify-end">
-        <LanguageSwitcher currentLocale={locale} />
-      </div>
-      <p className="text-sm uppercase tracking-widest text-muted-foreground">
-        Locale: {locale}
-      </p>
-      <h1 className="text-4xl font-bold md:text-5xl">{t("title")}</h1>
-      <p className="max-w-2xl text-lg text-muted-foreground">{t("description")}</p>
-      <Button size="lg" asChild>
-        <Link href={`/${locale}/booking`}>{t("cta")}</Link>
-      </Button>
+    <main className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="rounded-3xl bg-yellow-50 p-10 text-center">
+        <p className="text-lg text-slate-600">{t("subtitle")}</p>
+        <h1 className="mt-2 text-5xl font-bold text-slate-900">{t("title")}</h1>
+        <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-slate-700">{t("lorem")}</p>
+        <Button className="mt-8" size="lg" asChild>
+          <Link href={`/${locale}/booking`}>{t("cta")}</Link>
+        </Button>
+      </section>
     </main>
   );
 }

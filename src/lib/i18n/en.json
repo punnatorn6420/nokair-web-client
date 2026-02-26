@@ -1,7 +1,43 @@
 {
-  "home": {
-    "title": "Welcome to Nok Air",
-    "description": "Book flights faster with a lightweight, localized web experience.",
-    "cta": "Start booking"
+  "header": {
+    "brand": "Nok Air",
+    "nav": {
+      "home": "Home",
+      "booking": "Booking",
+      "promotions": "Promotions",
+      "flightStatus": "Flight Status",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "title": "Nok Air",
+    "description": "Thailand's friendly low-cost airline with smooth booking, easy check-in, and reliable service.",
+    "linksTitle": "Quick Links",
+    "links": ["Book Flights", "Online Check-in", "Flight Status", "Latest Promotions"],
+    "copyright": "© 2026 Nok Air Demo. All rights reserved."
+  },
+  "publicHome": {
+    "title": "Fly Smart, Fly Fun",
+    "subtitle": "Welcome to the Nok Air demo homepage",
+    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, nibh at malesuada volutpat, massa nisl bibendum augue, in malesuada nulla lectus sed urna. Cras convallis mauris non orci gravida, vitae accumsan nunc faucibus.",
+    "cta": "Go to Booking"
+  },
+  "booking": {
+    "title": "Flight Booking",
+    "description": "Search for the best fares and top routes like Chiang Mai, Phuket, Hat Yai, and Ubon Ratchathani in just a few clicks."
+  },
+  "promotions": {
+    "title": "Promotions",
+    "items": ["Fares from 699 THB", "20% off baggage add-ons", "Bonus points for Nok Fan Club members"]
+  },
+  "flightStatus": {
+    "title": "Flight Status",
+    "description": "Check departure times, estimated arrivals, and latest boarding gate information for Nok Air flights."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Reach us daily for flight inquiries, ancillary services, and travel assistance.",
+    "phone": "Call Center: 1318",
+    "email": "Email: contact@nokair.com"
   }
 }

@@ -1,9 +1,10 @@
+import dynamic from "next/dynamic";
+import HomeContentSkeleton from "@/components/home/home-content-skeleton";
+
+const HomeContent = dynamic(() => import("@/components/home/home-content"), {
+  loading: () => <HomeContentSkeleton />,
+});
+
 export default function Home() {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iste hic
-      incidunt veniam modi odit dolores totam vitae. Suscipi tmollitia itaque
-      odio. Pariatur in rem culpa reiciendis tempora. Ex, provident.
-    </div>
-  );
+  return <HomeContent />;
 }

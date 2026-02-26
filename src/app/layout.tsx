@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "@/app/globals.css";
 import { I18nProvider } from "@/lib/i18n";
-import { getClientLocale, DEFAULT_LOCALE } from "@/lib/locales.client";
+import { getRequestLocale } from "@/lib/locales";
 
 async function loadMessages(locale: "th" | "en") {
   if (locale === "en") {
@@ -37,7 +37,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = (await getClientLocale()) ?? DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const messages = await loadMessages(locale);
 
   return (

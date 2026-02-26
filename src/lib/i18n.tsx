@@ -2,8 +2,7 @@
 
 import { createContext, useContext, useMemo } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Messages = Record<string, any>;
+type Messages = Record<string, unknown>;
 type Ctx = { locale: "th" | "en"; messages: Messages };
 
 const I18nCtx = createContext<Ctx | null>(null);
@@ -27,11 +26,13 @@ export function useT(ns?: string) {
 
   function get<T = string>(path: string, fallback?: T) {
     const parts = (ns ? `${ns}.${path}` : path).split(".");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let cur: any = ctx!.messages;
+    let cur: unknown = ctx!.messages;
     for (const p of parts) {
-      cur = cur?.[p];
-      if (cur == null) return (fallback as T) ?? (path as unknown as T);
+      if (typeof cur === "object" && cur !== null && p in cur) {
+        cur = (cur as Record<string, unknown>)[p];
+      } else {
+        return (fallback as T) ?? (path as unknown as T);
+      }
     }
     return cur as T;
   }
